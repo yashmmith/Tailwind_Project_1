@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Pro2</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <nav class="p-3 flex bg-white justify-between items-center">
+        <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="size-16 object-cover max-w-20 max-h-20 rounded-full" src="./original-c358b80e1db27567519ce923f404fdd7.webp" alt="companylogo">
+            <span class="text-lg font-medium">ToDesktop</span>
+        </a>
+        <div id="nav-menu" class="hidden lg:flex m-5 gap-8">
+            <a href="#" class="font-medium hover:text-red-500">Pricing</a>
+            <a href="#" class="font-medium hover:text-red-500">Docs</a>
+            <a href="#" class="font-medium hover:text-red-500">Changelog</a>
+            <a href="#" class="font-medium hover:text-red-500">Class</a>
+            <a href="#" class="font-medium hover:text-red-500">Login</a>
+        </div>
+        <button class="hidden lg:flex gap-2 items-center border border-gray-700 px-6 py-2 rounded-lg hover:text-red-500">
+            <i class="ri-focus-fill"></i>
+            <span>Electron Developers</span>
+            <i class="ri-arrow-right-s-line"></i>
+        </button>
+        <button class="p-2 lg:hidden" onclick="handleMenu()">
+            <i class="ri-menu-fill text-2xl text-gray-900"></i>
+        </button>
+
+        <div id="nav_dialog" class="hidden fixed z-10 lg:hidden p-3 bg-white inset-0">
+            <div id="nav-bar" class="flex justify-between">
+                <a href="#" id="brand" class="flex gap-2 items-center">
+                <img class="size-16 object-cover max-w-12 max-h-12" src="./18.jpg" alt="companylogo">
+                <span class="text-lg font-medium">ToDesktop</span>
+                </a>
+                <button class="p-2 lg:hidden" onclick="handleMenu()">
+                <i class="ri-close-line text-2xl text-gray-900"></i>
+                </button>
+            </div>
+            <div class="mt-6">
+                <a href="#" class="font-medium m-3 p-3 hover:text-red-500 block rounded-lg">Pricing</a>
+                <a href="#" class="font-medium m-3 p-3 hover:text-red-500 block rounded-lg">Docs</a>
+                <a href="#" class="font-medium m-3 p-3 hover:text-red-500 block rounded-lg">Changelog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:text-red-500 block rounded-lg">Blog</a>
+                <a href="#" class="font-medium m-3 p-3 hover:text-red-500 block rounded-lg">Login</a>
+            </div>
+            <div class="h-[1px] bg-gray-300"></div>
+            <button class="w-full mt-6 flex gap-2 items-center hover:bg-gray-200 px-6 py-4 rounded-lg hover:text-red-500">
+            <i class="ri-focus-fill"></i>
+            <span>Electron Developers</span>
+        </button>
+        </div>
+    </nav>
+    <main>
+        <div id="hero" class="overflow-hidden min-h-screen bg-gradient-to-b from-purple-50 via-orange-50 to-transparent">
+            <div id="hero_container" class="max-w-4xl mx-auto px-6 pt-6 pb-32 flex flex-col sm:items-center sm:text-center sm:pt-12">
+                <div id="version_text" class="flex my-6 gap-2 border-2 border-yellow-300 w-fit rounded-lg px-3 py-1 bg-yellow-50 items-center shadow-md hover:shadow-lg hover:-translate-y-1 transition group">
+                    <div class="w-2 h-2 border bg-yellow-400 rounded-full border-yellow-800"></div>
+                    <p class="font-display font-medium text-yellow-600">v0.21.1: <span class="text-yellow-900">Find-in-page bug fixes</span></p>
+                    <i class="ri-arrow-right-line text-yellow-600 group-hover:translate-x-1 transition duration-300"></i>
+                </div>
+                <div id="hero_feartures" class="hidden gap-8 my-6 sm:flex">
+                    <div class="flex justify-center gap-2 items-center text-grey-500">
+                        <i class="ri-file-code-line"></i>
+                        <p>Code Optional</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-grey-500">
+                        <i class="ri-drag-drop-fill"></i>
+                        <p>Drag and Drop builder</p>
+                    </div>
+                    <div class="flex justify-center gap-2 items-center text-grey-500">
+                        <i class="ri-macbook-line"></i>
+                        <p>Windows, Mac, Linux</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl sm:text-7xl font-display font-medium font-semibold leading-snug leading-normal mt-4">Web app to desktop app in minutes</h1>
+                <p class="text-xl mt-4 sm:text-2xl sm:mt-8 text-grey-800">Take your web codebases and transform it into a cross platform desktop app with native functionality.</p>
+                <div id="buttons-container" class="flex mt-12 flex-col sm:flex-row gap-4">
+                    <button class="px-8 py-3 w-75 sm:w-75 font-semibold text-white rounded-lg bg-blue-600 shadow-sm hover:bg-opacity-90">Download now</button>
+                    <button class="px-8 py-3 w-75 sm:w-75 font-semibold text-black rounded-lg bg-white border border-grey-300 hover:bg-grey-400">Read Docs</button>
+                </div>
+            </div>
+            <div id="companies_container" class="flex flex-col gap-8">
+                    <div id="companies-title" class="flex justify-center gap-4">
+                    <i class="ri-corner-left-down-line translate-y-2"></i>
+                    <span class="font-medium">APPS POWERED BY TODESKTOP</span>
+                    <i class="ri-corner-right-down-line translate-y-2"></i>
+                </div>
+                <div id="companies_lines_group" class="flex flex-col gap-4">
+                    <div id="line1" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4oS6v9KZbt2oTYqr4dLQoc6Ozbxr6ByJ8MeSoX7Yfx7TeL2oFt2-M6mdiVAOktEJels&usqp=CAU" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/18305782/file/original-a9bf367c52d2df60246aff1dc5dac5d9.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Messi</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/13776049/file/original-23370cd21799ff23073a30dde56e6151.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Neymar</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44179196/file/original-209608c7046959c404779e92bb3a03bf.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">kaka</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/13471697/file/original-21ff3faf2352ffb98f3100e6ba3bffb9.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Ronaldenio</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/33652798/file/original-3a1148c09d6f01a2d92e9a5e30006f0c.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4oS6v9KZbt2oTYqr4dLQoc6Ozbxr6ByJ8MeSoX7Yfx7TeL2oFt2-M6mdiVAOktEJels&usqp=CAU" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">luca</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/18305782/file/original-a9bf367c52d2df60246aff1dc5dac5d9.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">kross</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/13776049/file/original-23370cd21799ff23073a30dde56e6151.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Lukaku</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44179196/file/original-209608c7046959c404779e92bb3a03bf.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Ibrahimovic</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/13471697/file/original-21ff3faf2352ffb98f3100e6ba3bffb9.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Indesta</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/33652798/file/original-3a1148c09d6f01a2d92e9a5e30006f0c.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Yamal</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                    </div>
+                    <div id="line2" class="flex gap-4 w-screen -translate-x-36 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/43433843/file/original-68160f0cf5c8bebcf1da8188bd9f8584.jpg?resize=2048x2901&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Chahal</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/17860989/file/original-16681443ebdbb12a7d7db59b85837ac7.png?resize=2048x1537&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Modric</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/4396119/file/original-adab6dbb256d3598ad5afc8f9e0ba968.png?resize=400x300&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Mbape</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/33652799/file/original-7b75a615a30bb269902b45beeca67a6d.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">KDB</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/31931472/file/original-93cda5c01f34ac3ddd68275f9f207b7f.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Pogba</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/31931471/file/original-c41bd8ea14520e0bba563025fe2ba84a.png?resize=1600x1200&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Kohli</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45685462/file/a39970871827ddbbfcdce79c7054d540.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Sachin</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/11360455/file/original-5bd8c59dc9d53a039fa05f12a0496157.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Rohit</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/8261314/file/original-a2f4fed1dcad8cbbce77bb7dde95e71c.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Ms</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/7001282/file/original-da86b92ab13c855a96146625524c650e.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Rashid</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/10054957/file/original-7324cc81b89bf0582190ef63fd39dc76.png?resize=1600x1200&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">MOhit</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45589292/file/f88b8bf99c1e6be04a61b6835adbca2a.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Tilak</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/43433843/file/original-68160f0cf5c8bebcf1da8188bd9f8584.jpg?resize=2048x2901&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Chahal</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                    </div>
+                    <div id="line3" class="flex gap-4 w-screen -translate-x-48 transition-transform ease-linear">
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44498643/file/f8ba4d23efad261bffdee9b4c15096f8.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Phone</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44449380/file/f44ade2a7265da4976ded122e6c58059.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Power</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44360215/file/938a6092617709e4ab1e8ff9ccd9ca04.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Ties</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44314991/file/05693680f344bc542c9bad5780bac052.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Spoon</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/43847857/file/original-09c71fa01b99ad08bbeb79b623ca7664.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Automizer</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44465362/file/ed8c68ce1af4d26cc8beff403455d81d.png?resize=1624x1182&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Diffuser</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15501665/file/original-b90d75b2cafffc8d8c05d578a45523e0.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Television</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/17646759/file/original-28fa176d21c4910e7c3f11dd8c01b7b7.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Fridge</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/15773494/file/original-a9faaeafcb1bb6122d6d032423b363cb.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">WIFI</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/45072095/file/47cdbffe42ea02b349e422ba4c51b484.jpg?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Homepods</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/42942096/file/original-37aa1802ddee6d035010f15e4a500b92.png?resize=1504x1128&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">Remote</span>
+                        </div>
+                        <div class="flex flex-col min-w-24 min-h-24 items-center justify-center bg-white rounded-xl border border-grey-300 md:min-h-32 md:min-w-32">
+                            <img class="size-16 md:20" src="https://cdn.dribbble.com/userupload/44486260/file/3576b19632c0e36978a704f14c48e4e5.png?resize=2048x1536&vertical=center" alt="logo1">
+                            <span class="text-[12px] md:text-[16px] font-semibold">UnBounce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="stepbystep" class="px-6 py-12 max-w-7xl mt-16 mx-auto lg:px-8 mt-32">
+            <h2 class="text-5xl mb-14 sm:font-semibold">How It Works</h2>
+            <div id="step1" class="rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-5">
+                <div class="flex flex-col gap-6 lg:w-1/2">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 width-fit px-3 py-1 rounded-lg font-medium font-display">Step 1</span>
+                    <h3 class="text-4xl">Bootstrap Straight from your web app</h3>
+                    <p class="text-lg font-light">Copy and paste your web app url into ToDesktop .
+                    Customize your app design, app icon and window frame UI with no code. 
+                </p>
+                <ul class="grid grid-cols-2 gap-2">
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Multiple windows</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Menubar/Tray menus</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Offline Support</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Customisable menus</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Launch on startup</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Tabs(Mac Only)</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="pt-12 lg:ml-4 lg:w-1/2">
+                    <img src="https://www.atlassian.com/blog/wp-content/uploads/2024/01/browser_tabs-1024x512-1.png" alt="">
+                </div>
+            </div>
+            <div id="step2" class="mt-6 rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-5">
+                <div class="flex flex-col gap-6 lg:w-1/2">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 width-fit px-3 py-1 rounded-lg font-medium font-display">Step 2</span>
+                    <h3 class="text-4xl">All CDN's and CLI's included</h3>
+                    <p class="text-lg font-light">The the present cdn's and cli's are included in the app and you dont have to go anywhere for deployment. 
+                </p>
+                <ul class="grid grid-cols-2 gap-2">
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">CDN</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">CLI</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Multifeature access</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Azure</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">NPM</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">NPX</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="pt-12 lg:ml-4 lg:w-1/2">
+                    <img src="https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fgka5knkzhqssp93panfw.png" alt="">
+                </div>
+            </div>
+            <div id="step3" class="mt-6 rounded-xl border px-8 py-12 flex flex-col lg:flex-row gap-5">
+                <div class="flex flex-col gap-6 lg:w-1/2">
+                    <span class="border border-yellow-300 bg-yellow-50 text-yellow-800 width-fit px-3 py-1 rounded-lg font-medium font-display">Step 3</span>
+                    <h3 class="text-4xl">Publish with the same address</h3>
+                    <p class="text-lg font-light">We make sure all your files are carried to deployment . 
+                </p>
+                <ul class="grid grid-cols-2 gap-2">
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Build</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Test</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Code Scanning </a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">push</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Continous Integration</a>
+                    </li>
+                    <li class="flex gap-4">
+                        <i class="ri-check-line"></i>
+                        <a href="#" class="text-lg font-light border-b border-black border-opacity-30 hover:border-opacity-90">Deployment</a>
+                    </li>
+                </ul>
+                </div>
+                <div class="pt-12 lg:ml-4 lg:w-1/2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdwgBxtjDSxh3P6oAftFCgXI4d4fbg1Fots2YSpOGchcs6ohsN0Bo6UQ_J1j3pCI0llKc&usqp=CAU" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="bento_grid" class="px-6 py-12 max-w-7xl mx-auto lg:px-8 mt-4">
+            <h2 class=" text-5xl mb-14 sm:font-semibold">
+                ToDesktop handles the details
+            </h2>
+            <div id="grid_container" class="flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:grid-rows-6" style="grid-auto-rows:auto">
+                <div class="lg:row-span-2 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-red-50 group-hover:via-purple-50 group-hover:to-yellow-50">
+                        <h3 class="text-2xl font-medium">Native Notifications</h3>
+                        <img class="w-32 h-24 object-cover" src="https://developer.apple.com/news/images/og/notifications-og.jpg" alt="">
+                    </div>
+                </div>
+                <div class="lg:row-span-3 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-blue-50 group-hover:via-yellow-50 group-hover:to-purple-50">
+                        <h3 class="text-2xl font-medium">Auto Updates</h3>
+                        <p class="text-sm text-center">We'll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features</p>
+                        <img class="w-32 h-24 object-cover" src="https://static0.pocketlintimages.com/wordpress/wp-content/uploads/151381-phones-feature-ios-14-release-date-news-and-features-what-s-coming-to-apple-s-new-iphone-update-image1-r5x6shcktd.jpg" alt="">
+                    </div>
+                </div>
+                <div class="lg:row-span-2 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-green-50 group-hover:via-violet-50 group-hover:to-red-50">
+                        <h3 class="text-2xl font-medium">Great Networking</h3>
+                        <img class="w-32 h-24 object-cover" src="https://media.geeksforgeeks.org/wp-content/uploads/20230406152358/CN-(1).jpg" alt="">
+                    </div>
+                </div>
+                <div class="lg:row-span-3 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-orange-50 group-hover:via-purple-50 group-hover:to-red-50">
+                        <h3 class="text-2xl font-medium">Code Completion</h3>
+                        <p class="text-sm text-center">Never worry about what next when you have auto complete</p>
+                        <img class="w-32 h-24 object-cover" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-hy3g3KcPd10PDpFy5dxuClXxnjeowupRaw&s" alt="">
+                    </div>
+                </div>
+                <div class="lg:row-span-2 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-indigo-50 group-hover:via-yellow-50 group-hover:to-purple-50">
+                        <h3 class="text-2xl font-medium">Adaptive Technologies</h3>
+                        <img class="w-32 h-24 object-cover" src="https://www.raycast.com/_next/image?url=https%3A%2F%2Ffiles.raycast.com%2F7lv7nuo36ta1d78qbbwc3jp0z9sb&w=640&q=75" alt="">
+                    </div>
+                </div>
+                <div class="lg:row-span-3 lg:col-span-1 group rounded-2xl bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-green-50 group-hover:via-blue-50 group-hover:to-gray-50">
+                        <h3 class="text-2xl font-medium">File storage & retrieval</h3>
+                        <p class="text-sm text-center">Enhanced file storage for better security and retrieval or backup</p>
+                        <img class="w-32 h-24 object-cover" src="https://cdn.dribbble.com/userupload/32396723/file/original-7cacf716b31a38f1ddc7f126080eb690.jpg?resize=400x0" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="companies_line" class="px-6 py-12 max-w-7xl mx-auto lg:px-8 mt-4">
+            <div class="border rounded-lg overflow-hidden flex justify-center p-4">
+                <div id="line4" class="flex gap-8 padding-6">
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Tray-Modules</h3>
+                    <span>.</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Multi-Window_support</h3>
+                    <span>.</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Trays</h3>
+                    <span>.</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Deel-Linking</h3>
+                    <span>.</span>
+                    <h3 class="whitespace-nowrap my-0 mx-2 text-2xl font-semibold">Download Analytics</h3>
+                    <span>.</span>
+                </div>
+            </div>
+        </div>
+        <div id="testimonials" class="px-6 py-12 max-w-7xl mt-4 mx-auto lg:px-8">
+            <h2 class="text-5xl mb-6 sm:font-semibold">Customer Stories</h2>
+            <div class="rounded-xl border flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <div id="left" class="flex flex-col gap-6 sm:gap-8 p-4 sm:p-8 lg:w-1/2">
+                    <img class="size-12 sm:size-16 rounded-lg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhaQRRz9OxpJLjhBphInUe-7DzzVblWhi6yw&s" alt="">
+                    <h3 class="text-lg sm:text-xl leading-relaxed">Click up used ToDesktop to get their desktop app in front of customers in days instead of months</h3>
+                    <div id="tags" class="flex gap-2 sm:gap-3 flex-wrap">
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-2 sm:px-3 py-1 rounded-md text-yellow-800 text-xs sm:text-sm">
+                            <i class="ri-check-line"></i>
+                            <span class="font-display">Chrome Less UI</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-2 sm:px-3 py-1 rounded-md text-yellow-800 text-xs sm:text-sm">
+                            <i class="ri-check-line"></i>
+                            <span class="font-display">Native spellcheck</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-2 sm:px-3 py-1 rounded-md text-yellow-800 text-xs sm:text-sm">
+                            <i class="ri-check-line"></i>
+                            <span class="font-display">Task time in menu</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-2 sm:px-3 py-1 rounded-md text-yellow-800 text-xs sm:text-sm">
+                            <i class="ri-check-line"></i>
+                            <span class="font-display">Notification count on dock</span>
+                        </div>
+                        <div class="flex gap-2 items-center justify-center bg-yellow-50 w-fit border border-yellow-300 px-2 sm:px-3 py-1 rounded-md text-yellow-800 text-xs sm:text-sm">
+                            <i class="ri-check-line"></i>
+                            <span class="font-display">Global hot key to create task</span>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg font-light text-gray-500">ToDesktop provided us with a <span class="text-gray-800 font-medium">polished desktop app</span> in no time. Their expert team guided us through the whole process migration from our outdated legacy system and allowed us to deliver <span class="text-gray-800 font-medium">new and improved features</span> to customers within days.</p>
+                    <div id="user-card" class="flex gap-3 border border-gray-300 px-3 py-3 rounded-full w-fit">
+                        <img src="https://marketplace.canva.com/EAF-FAvfD1E/2/0/1600w/canva-neon-rainbow-gradient-fun-creative-linkedin-profile-picture-IYcgPnJtx3Q.jpg" class="w-10 sm:w-12 rounded-full" alt="">
+                        <div class="flex flex-col justify-center">
+                            <h3 class="font-semibold text-base sm:text-lg">Zed Evans</h3>
+                            <h4 class="text-gray-500 text-xs sm:text-sm">Founder and CEO, TNF</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="right" class="flex items-center justify-center p-4 sm:p-5 lg:w-1/2">
+                    <img class="w-full h-auto max-h-96" src="https://tailwindcss.com/plus-assets/img/heroes/ui-blocks-col-2-row-6-dark.png" alt="ToDesktop interface">
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col lg:flex-row mt-6">
+                <div class="flex rounded-2xl group bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white flex-col p-6 gap-6 flex rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-blue-50 group-hover:via-yellow-50 group-hover:to-purple-50">
+                        <div class="flex p-6 items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-200 rounded-full flex pt-3 justify-center">
+                                <i class="ri-code-line text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold ml-4 sm:ml-3">Native API's</h3>
+                        </div>
+                        <p class="text-lg font-light">What sets ToDesktop apart is its seamless integration with native API's using our existing web codebase. By tapping into API's like Tray and Notifications, we've crafted an exceptionally polished desktop user experince.</p>
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full" src="https://img.freepik.com/premium-vector/round-circle-logo-icon-sign-symbol-red-design-vector-illustration_685751-586.jpg" alt="">
+                            </div>
+                            <div class="w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5oC1_UDsFvr51RjjD5Q6aPe5lA7jXwckj6ZCA-x59To0ll80lGwdPEEKPqfo4JUFJ3Fw&usqp=CAU" alt="">
+                            </div>
+                            <div class="flex flex-col ml-5 mt-3">
+                                <h3 class="text-lg font-semibold">Rick Pasto0r</h3>
+                                <a href="#" class="text-grey-500 w-fit">Rise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row mt-6">
+                <div class="flex rounded-2xl group bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-green-200 hover:via-pink-200 hover:to-red-200">
+                    <div class="bg-white flex-col p-6 gap-6 flex rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-pink-50 group-hover:via-green-50 group-hover:to-red-50">
+                        <div class="flex p-6 items-center gap-4">
+                            <div class="w-12 h-12 bg-green-200 rounded-full flex pt-3 justify-center">
+                                <i class="ri-qr-code-fill text-green-600"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold ml-4 sm:ml-3">Auto Updates</h3>
+                        </div>
+                        <p class="text-lg font-light">We'll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features. date and deliver performance improvements.</p>
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full" src="https://img.freepik.com/premium-vector/abstract-purple-logo-design_1125044-62032.jpg" alt="">
+                            </div>
+                            <div class="w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full object-cover" src="https://deadline.com/wp-content/uploads/2023/03/Keanu-Reeves-john-wick-4.jpg?w=681&h=383&crop=1" alt="">
+                            </div>
+                            <div class="flex flex-col ml-5 mt-3">
+                                <h3 class="text-lg font-semibold">Jhon Wick</h3>
+                                <a href="#" class="text-grey-500 w-fit">Wickuniverse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row mt-6">
+                <div class="flex rounded-2xl group bg-slate-100 p-[1px] hover:bg-gradient-to-br hover:from-red-200 hover:via-purple-200 hover:to-yellow-200">
+                    <div class="bg-white flex-col p-6 gap-6 flex rounded-2xl w-full h-full p-6 flex flex-col items-center justify-center gap-4 group-hover:bg-gradient-to-b group-hover:from-red-50 group-hover:via-yellow-50 group-hover:to-voilet-50">
+                        <div class="flex p-6 items-center gap-4">
+                            <div class="w-12 h-12 bg-red-200 rounded-full flex pt-3 justify-center">
+                                <i class="ri-file-code-fill text-red-700"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold ml-4 sm:ml-3">Native API's</h3>
+                        </div>
+                        <p class="text-lg font-light">What sets ToDesktop apart is its seamless integration with native API's using our existing web codebase. By tapping into API's like Tray and Notifications, we've crafted an exceptionally polished desktop user experince.</p>
+                        <div class="flex">
+                            <div class="-mr-3 w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsjpJwuFNyaBibcD2Ay8IaftQS5Tg0nViAqGuqhEpBXPS5dr45vh724MHWk4LW8zaF9BE&usqp=CAU" alt="">
+                            </div>
+                            <div class="w-12 h-12 flex justify-center item-center rounded-full border border-white">
+                                <img class="min-w-16 min-h-16 rounded-full object-cover" src="https://goldenglobes.com/wp-content/uploads/2023/10/samuel_l_jackson-gt.jpg?w=600?w=600" alt="">
+                            </div>
+                            <div class="flex flex-col ml-5 mt-3">
+                                <h3 class="text-lg font-semibold">Rick Pasto0r</h3>
+                                <a href="#" class="text-grey-500 w-fit">Rise</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="rounded-xl border flex flex-col lg:flex-row gap-8 lg:gap-12 mt-6 bg-black text-white">
+                <div id="left" class="flex flex-col gap-6 sm:gap-8 p-4 sm:p-8 lg:w-1/2">
+                    <img class="size-12 sm:size-16 rounded-lg" src="https://i.pinimg.com/736x/af/ab/a3/afaba32f313cedf91000125b7dce0c95.jpg" alt="">
+                    <h3 class="text-lg sm:text-xl leading-relaxed">Create your desktop app for free</h3>
+                    <button class="bg-blue-700 text-white font-semibold text-xl p-2 rounded-2xl hover:bg-blue-500">
+                        <i class="ri-folder-download-line"></i>
+                        Download to desktopBuilder
+                    </button>
+                    <p class="text-base sm:text-lg font-light text-gray-500">ToDesktop provided us with a <span class="text-gray-800 font-medium">polished desktop app</span> in no time. Their expert team guided us through the whole process migration from our outdated legacy system and allowed us to deliver <span class="text-gray-800 font-medium">new and improved features</span> to customers within days.</p>
+                    <div id="user-card" class="flex gap-3 border border-gray-300 px-3 py-3 rounded-full w-fit">
+                        <img src="https://cdn1.faroutmagazine.co.uk/uploads/1/2023/03/Quentin-Tarantino-Pulp-Fiction-1994-Far-Out-Magazine-1140x855.jpg" class="w-10 sm:w-12 rounded-full object-cover" alt="">
+                        <div class="flex flex-col justify-center">
+                            <h3 class="font-semibold text-base sm:text-lg">Quentin Tarantino</h3>
+                            <h4 class="text-gray-500 text-xs sm:text-sm">Founder and CEO, Pulpfiction</h4>
+                        </div>
+                    </div>
+                </div>
+                <div id="right" class="flex items-center justify-center p-4 sm:p-5 lg:w-1/2">
+                    <img class="w-full h-auto max-h-96" src="https://www.creative-tim.com/blog/content/images/2022/07/soft-ui-dashboard-tailwind--1-.jpg" alt="ToDesktop interface">
+                </div>
+            </div>
+        </div>
+        <div id="pricing" class="px-6 py-12 max-w-7xl mx-auto lg:px-8 mt-3">
+            <h2 class="text-5xl font-semibold">Choose a plan that fits <br> your needs</h2>
+            <div class="flex flex-col lg:flex-row gap-4">
+            <div class="flex flex-col mt-12 p-5 border border-grey-400 rounded-2xl lg:bg-gray-100 lg:border-none">
+                <h3 class="font-semibold text-3xl">Free</h3>
+                <p class="mt-3 text-lg text-gray-500">For personal use or testing your app before deployment</p>
+                <h3 class="font-light text-2xl mt-6">Key Features</h3>
+                <div class="flex items-end justify-start gap-2 mt-1">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Free for personal use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2 mt-1">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Limited credits</p>
+                </div>
+                <div class="flex items-end justify-start gap-2 mt-1">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Unlimited use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2 mt-1">
+                    <i class="ri-close-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Advanced features</p>
+                </div>
+                <button class="text-indigo-600 p-2 mt-12 border border-gray-500 rounded-xl hover:bg-blue-700 hover:text-white">Read Docs</button>
+            </div>
+            <div class="flex flex-col mt-12 p-5 border border-grey-400 rounded-2xl lg:bg-gray-100 lg:border-none">
+                <h3 class="font-semibold text-3xl">Essential</h3>
+                <p class="mt-3 text-lg text-gray-500">For simple desktop apps and limited features</p>
+                <h3 class="font-bold text-2xl mt-4">$99/month</h3>
+                <h3 class="font-light text-2xl mt-4">Key Features</h3>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Free for personal use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Limited credits</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-close-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Unlimited use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Advanced features</p>
+                </div>
+                <button class="text-indigo-600 p-2 mt-6 border border-gray-500 rounded-xl hover:bg-blue-700 hover:text-white">Read Docs</button>
+            </div>
+            <div class="flex flex-col relative mt-12 p-5 border border-grey-400 rounded-2xl lg:bg-gray-100 lg:border-none">
+                <h2 class="bg-blue-200 w-fit px-3 py-2 absolute top-0 right-6 -translate-y-1/2  text-blue-700 rounded-3xl ">Most Popular</h2>
+                <h3 class="font-semibold text-3xl">Professional</h3>
+                <p class="mt-3 text-lg text-gray-500">For sophisticated desktop app deployment</p>
+                <h3 class="font-bold text-2xl mt-4">$240/month</h3>
+                <h3 class="font-light text-2xl mt-4">Key Features</h3>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Free for personal use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Limited credits</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Unlimited use</p>
+                </div>
+                <div class="flex items-end justify-start gap-2">
+                    <i class="ri-check-line"></i>
+                    <p class="mt-3 text-lg text-gray-500">Advanced features</p>
+                </div>
+                <button class="text-white p-2 mt-6 border border-blue-700 bg-blue-600 rounded-xl hover:bg-red-500 hover:text-blue-600">Read Docs</button>
+            </div>
+            </div>
+        </div>
+        <footer class="px-6 py-12 max-w-7xl mx-auto lg:px-8 mt-3">
+            <div class="rounded-lg border bg-grey-100 flex flex-col lg:flex-row lg:justify-between">
+                <div class="flex flex-col items-center justify-center p-4 gap-3 lg:ml-50 lg:m-9">
+                    <a href="#" class="text-2xl font-semibold">Documentation</a>
+                    <div>
+                    <i class="ri-github-fill"></i>
+                    <i class="ri-twitter-x-fill"></i>
+                    </div>
+                </div>
+                <div class="flex item-end justify-center m-3 lg:mr-50 lg:m-9">
+                    <img class="size-16 object-cover max-w-20 max-h-20 rounded-full" src="./original-c358b80e1db27567519ce923f404fdd7.webp" alt="companylogo">
+                    <span class="text-lg font-medium ml-3 mt-5">ToDesktop</span>
+                </div>
+            </div>
+            <div class="px-6 py-12 max-w-7xl mx-auto lg:px-8 mt-3 flex flex-col items-center justify-center gap-5">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX7ZR7////7WAD+5t77Zhr7Yxr7cDL7WQD7XAD7VQD+5N37YRT+z8D7Yhb7ayj7Xwz8j2f9spn/9fH+7ef8hVf7eUT9v6r+08X9qo78i2H8nHr+2s/9xbP9uKL7aST9ybj7dT38glL+3tT7fUr8k27+18r8ooP9tp78mXb8jWNr2rv3AAAD8UlEQVR4nO3bbVebQBQEYBJdQ95Eo0bru61W/f9/sLE5VpiBwG6IvTdnnm89rRyuE+gOS7JMRERERERERERERERERERERERERERERMSZQHo8Vn+nmS4ckSL5WMd4KAsjFlcD9GOadqgwxSOdJv+y+jQ+w/M6GKcdKb+DAy2G/Z5qouK5pxBDgce5NhHhKsQDPLNJUoj5Eg5zlvhZ6N30vJcQ+So8Sbye+ze+6SNEijDtk7AT8wsK8Tz61x8CHuPJTIRZNrzcPkSK8MbGjXQtHG0dYpjjER7nuznZNKNbPL+fkSFShDNLEdYlEBliyPDnjy0s2EpoORIZYo4fgtvRrk41UcgpxKeI64gjtFErynJagMeESBHe5bs71VTDRXqIHGFuLsLVAvyaQux8N6Rb8ZXBCOtaVNcQwz384MLOeq2sOMEJbzqeKEVopTUhblG/OoUYjuHHzLQmxC2qW4gU4bPRCOtaVJcQ6SpMfQjyDeaPFGKH2+noAX4ovnl9n+EsPkS6CmPX7N+Kznbw0hoiRXhhqjUhblFt50vV8tJWa0L8KKItRIrQxGPuDbhFbQ6RPtfmWhPiFrU5xBHem+y1JsQtatPzFroKlyaX3FXUojaFSBFabE2IW9Rj41lThKcOIqxpUc33f4xwYf02szalFtV0JVKEv80uuauoRTWFiIs8o8WXcYuqvxIDLtTttiZELao+RNztMNyaELeouqUY/avU7f//gVrUrOYmiRGabk2IantNiHQV2m5NiFoUh4gRGm9NiPeiMETaN7bemlD+2hLi8KX69w8+ljNfuEVV9wMpwntnEda0qGpIGKGH1oTG2KLKFxpF6KE1IWpR5RAxQh+tCVGLyv7ltBcR1rSor2sN/y/00prQeAIjfj5lwl5o5CXLePOnhhDxGemb0whXIcL9ZLC+1+Cq1ex2YTvqR+tbJi5a3x21JkQt6iNEfPHC0EuW8eiZ/VXBb7DFvFlkzwimWYzpVeD2/TfT6OX0twL3bpqfF/uALWoyhtLhrjUhalFHp9U/W3vJMh62qGW1ciy9R5jVvdFXNnUfYd1eVMmry9aE+I2+L3vwGV2ZvjcOaPMly3jUoj65bU2IWtQnqy9ZxqMWtea4NSHaoliz89W07dErFx8cbRe2472oga2vpm2PvtVk7Ktp2+PvhzrbLmyXQ6Ww9tW07dGGov/WBMLhHt9I/6IJ9+1Dqgn3gCb0TxP6pwn904T+aUL/NKF/mtA/TeifJvRPE/qnCf3ThP5pQv80oX+a0D9N6J8m9E8T+qcJ/dOE/mlC/8Lh2aTkYLYn3yUpCcOK/RtQRERERERERERERERERERERERERETEhj9JaS0gByT2VwAAAABJRU5ErkJggg==" class="size-8" alt="">
+                <h4 class="text-light text-xl font-display ml-4">A Y Combinator company</h4>
+                <h4 class="text-light text-lg font-display ml-4 text-gray-500"><i class="ri-copyright-line"></i>2025 ToDesktop, inc. All rights reserved.</h4>
+            </div>
+        </footer>
+        <div class="h-[20px]"></div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
